@@ -1,0 +1,137 @@
+.container-forgot{
+    display: flex;
+    flex-direction: row-reverse;
+    font-weight: 400;
+}
+
+.bg-forgot { 
+    background-image: url("../../assets/bg.jpg");
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.form-forgot{
+    position: absolute;
+    width: 60%;
+    height: 55vh; 
+    background: rgba(55, 171, 157, 0.7);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title-forgot{
+    position: relative;
+    top: 10%;
+    font-size: 32px;
+    color: #0C1417;
+    font-weight: 400;
+    text-align: center;
+}
+
+#password-forgot{
+    position: relative;
+    width: 70%;
+    height: 15%;
+    top: 20%;
+    left: 0%;
+    padding-left: 2%;
+    border:0;
+    outline:0;
+    font-size: 18px;
+    color: #0C1417;
+    background: #EFF1F1;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+#confirm-forgot{
+    position: relative;
+    width: 70%;
+    height: 15%;
+    top: 25%;
+    left: 0%;
+    padding-left: 2%;
+    border:0;
+    outline:0;
+    font-size: 18px;
+    color: #0C1417;
+    background: #EFF1F1;
+    opacity: 0.6;
+    border-radius: 10px;
+}
+
+.olho-senha{
+    background-image: url("../../assets/eye.png");
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 7%;
+    left: 30%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+  
+.olho-fechado-senha{
+    background-image: url("../../assets/cd_eye.png");
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 7%;
+    left: 30%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+  }
+
+.olho-confirm{
+    background-image: url("../../assets/eye.png");
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 12%;
+    left: 30%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.olho-fechado-confirm{
+    background-image: url("../../assets/cd_eye.png");
+    height: 32px;
+    width: 32px;
+    position: relative;
+    top: 12%;
+    left: 30%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+
+#submit-forgot{
+    position: relative;
+    top: 20%;
+    left: 0%;
+    width:  20%;
+    height: 20%;
+    border:0;
+    outline:0;
+    margin: 0px 10px 0 10px;
+    color: #EFF1F1;
+    font-size: 18px;    
+    background: #0C1417;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.load-forgot{
+    position: absolute;
+    top: 84%;
+}

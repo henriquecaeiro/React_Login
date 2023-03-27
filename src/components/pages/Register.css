@@ -1,0 +1,155 @@
+.w50{
+    width: 45%;
+    height: 10%;
+    border:0;
+    outline:0;
+    margin: 0px 10px 0 10px;
+    font-size: 18px;
+    color: #0C1417;
+    padding-left: 20px;  
+    background: #EFF1F1;
+    opacity: 0.6;
+    border-radius: 15px;
+}
+
+.w100{
+    width: 95%;
+    height: 10%;
+    border:0;
+    outline:0;
+    margin: 0px 10px 0 10px;
+    font-size: 18px;
+    color: #0C1417;
+    padding-left: 20px;
+    /* top: 30px; */
+  
+    /* light */
+  
+    background: #EFF1F1;
+    opacity: 0.6;
+    border-radius: 15px;
+}
+
+.logo-register{
+    position: relative;
+    left: 50%;
+    margin-left: -112px;
+}
+
+.register-title{
+    position: absolute;
+    font-size: 48px;  
+    color: #0C1417;
+    top: 38%;
+   /*  margin: 0px 10px 20px 10px; */
+}
+
+#input_name{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+}
+
+#input_email{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+
+#input_date{
+    position: absolute;
+    top: 62%;
+    left: 0%;
+}
+
+#input_date::-webkit-calendar-picker-indicator {
+    position: relative;
+    cursor: pointer;
+    left: -5%;
+}
+
+#input_password{
+    position: absolute;
+    top: 74%;
+    left: 0%;
+}
+
+#eye-password{
+    background-image: url("../../assets/eye.png");
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 76%;
+    left: 38%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+#closedEye-password{
+    background-image: url("../../assets/cd_eye.png");
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 76%;
+    left: 38%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+#eye-confirm{
+    background-image: url("../../assets/eye.png");
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 76.5%;
+    left: 89%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+#closedEye-confirm{
+    background-image: url("../../assets/cd_eye.png");
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    top: 76.5%;
+    left: 89%;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+
+#input_confirm{
+    position: absolute;
+    top: 74%;
+    left: 50%;
+}
+
+#input_confirm::placeholder{
+    font-size: 16px;
+}
+
+.entrar{
+    position: absolute;
+    top:  88%;
+    left: 55%;
+}
+
+.form input[type=submit]{
+    position: absolute;
+    top: 86%;
+    left: 0;
+    width: 24.5vh;
+    height: 10%;
+    border:0;
+    outline:0;
+    margin: 0px 10px 0 10px;
+    color: #EFF1F1;
+    font-size: 18px;
+    /* secundaria +1 */
+    
+    background: #0C1417;
+    border-radius: 15px;
+    cursor: pointer;
+  }

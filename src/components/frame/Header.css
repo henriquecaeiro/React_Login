@@ -1,0 +1,41 @@
+.header{
+    background-color: #37AB9D;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+.logo-header{
+    position: relative;
+    height: 58px;
+    width: 58px ;
+    left: 10%;
+}
+
+.info{
+    position: relative;
+    left: 70%;
+    height: 38px;
+    width: 38px;
+}
+
+.logout{
+    position: relative;
+    left: 75%;
+    height: 38px;
+    width: 38px;
+}
+
+a{
+    display: flex;
+}
+
+@media screen and (max-height: 600px) {
+    .logo-header{   
+        height: 42px;
+        width: 42px ;
+    }
+
+
+}

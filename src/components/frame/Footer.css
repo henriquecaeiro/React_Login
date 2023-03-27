@@ -1,0 +1,17 @@
+.footer{
+    display: flex;
+    position: absolute;
+    top: 90%;
+    background-color: #37AB9D;
+    width: 100vw;
+    height: 10%;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.copy{
+    color: #EFF1F1;
+    font-size: 24px;
+    text-align: center;
+}

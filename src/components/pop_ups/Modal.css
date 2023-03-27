@@ -1,0 +1,110 @@
+.modal-bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(192, 204, 204,0.8);
+    z-index: 1;
+}
+
+.modal-container{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #EFF1F1;
+    border-radius: 15px;
+    filter: drop-shadow(7px 9px 12px rgba(0, 0, 0, 0.25));
+    display: flex;
+    justify-content: center;
+}
+
+.icon{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 5%;
+    margin-left: -10%;
+}
+
+.title{
+    position: absolute;
+    width: auto;
+    height: 56px;
+    top: 25%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000000;
+}
+
+.warning{
+    position: absolute;
+    width: auto;
+    height: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 47px;
+    color: #000000;
+    top: 45%;
+    margin-left: 2%
+}
+
+
+
+.button-err{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    margin-left: -30px; 
+    background: #F44237;
+    border-radius: 10px;
+    font-size: 32px;
+    color: #EFF1F1;
+    text-align: center;
+    left: 25%;
+    top: 80%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.button-suc{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    margin-left: -30px; 
+    background: #01b568;
+    border-radius: 10px;
+    font-size: 32px;
+    color: #EFF1F1;
+    text-align: center;
+    left: 25%;
+    top: 80%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.button-ped{
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    margin-left: -30px; 
+    background: #C0CCCC;
+    border-radius: 10px;
+    font-size: 32px;
+    color: #0C1417;
+    text-align: center;
+    left: 25%;
+    top: 80%;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}

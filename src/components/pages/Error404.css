@@ -1,0 +1,49 @@
+.error-container{
+    display: flex;
+}
+
+.bg-error{
+    position: absolute;
+    top: 10%;
+    background-image: url('../../assets/404.jpg');
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.error-box{
+    background-color: rgba(239, 241, 241, 0.6);
+    height: 75%;
+    width: 60%;
+    border-radius: 15px;
+}
+
+.title-error{
+    position: relative;
+    top: 10%;
+    font-weight: normal;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.phrase-error{
+    position: relative;
+    top: 20%;
+    font-weight: normal;
+    width: 100%;
+    font-size: 32px;
+    text-align: center;
+}
+
+.notFound{
+    position: relative;
+    left: 50%;
+    top: 5%;
+    margin-left: -50px;
+}
