@@ -14,7 +14,7 @@ function Info() {//Pág de informações do projeto
         <div className='info-bg'>
             <div className="info-box">
                 <img src={info} alt="info" className='info-icon' />
-                <p className='info-text'>Projeto construído em ReacJs para demonstrar o funcionamento da API de login criada por mim. Para mais informações acesse meu github:</p>
+                <p className='info-text'>Projeto construído em ReacJs, para demonstrar o funcionamento da API de login criada por mim. Para mais informações acesse meu github.</p>
                 <button  className='link'><Link to='https://github.com/henriquecaeiro?tab=repositories'>Acessar</Link></button>
             </div>
         </div>

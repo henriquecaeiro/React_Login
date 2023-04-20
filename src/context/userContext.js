@@ -7,10 +7,10 @@ const Context = createContext()
 
 function UserProvider({children}){
 
-  const {status,setStatus,message,setMessage,visible,setVisible,loading,setLoading,login,register,requestReset,forgotPassword} = useAuth()
+  const {status,setStatus,message,setMessage,visible,setVisible,loading,setLoading,login,register,requestReset,forgotPassword,authenticated,logout,setAuthenticated} = useAuth()
 
   return(
-    <Context.Provider value={{status,setStatus,message,setMessage,visible,setVisible,loading,setLoading,login,register,requestReset,forgotPassword}}>
+    <Context.Provider value={{status,setStatus,message,setMessage,visible,setVisible,loading,setLoading,login,register,requestReset,forgotPassword,authenticated,logout,setAuthenticated}}>
       {children}
     </Context.Provider>
   )

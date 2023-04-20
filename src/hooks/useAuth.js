@@ -2,7 +2,7 @@
 import api from '../utils/api'
 //importação de pacotes
 import { useNavigate} from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 
 
 export default function useAuth() {//Hook autenticação da aplicação
@@ -12,22 +12,41 @@ export default function useAuth() {//Hook autenticação da aplicação
   const [message, setMessage] = useState('');
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false)
+
+  useEffect(()=>{
+
+    const token = localStorage.getItem('token');
+
+    if(token){
+      api.defaults.headers.Authorization = `Bearer ${JSON.parse(token)}`;
+      setAuthenticated(true);
+    }
+
+  },[])
 
   async function login(user) {//função que manda os dados do user para a rota de login da api
+
+    setLoading(true)
+
     try {
       await api.post('/user/signin', user).then((response) => {
         setStatus(response.data.status)
         setMessage(response.data.message)
         setVisible(true)
         if(response.data.status == "SUCCESS"){////se o status for "sucesso" redireciona para a home
+          authUser(response.data)
           history('/')
         }
 
         return response.data
       })
-      setLoading(true)
     } catch (error) {
-        console.log(error.message);
+        setStatus("FAILED")
+        setMessage(error.response.data.message)
+        setVisible(true)
+        setLoading(false)
+
         return error.message
     }
   }
@@ -38,15 +57,18 @@ export default function useAuth() {//Hook autenticação da aplicação
         setStatus(response.data.status)
         setMessage(response.data.message)
         setVisible(true)
-        if(response.data.status == "PEDING"){//se o status for "pendente" redireciona para a tela de login
+        if(response.data.status == "PENDING"){//se o status for "pendente" redireciona para a tela de login
           history('/login')
         }
         return response.data
       })
       setLoading(true)
     } catch (error) {
-      console.log(error.message);
-      return error.message
+      setStatus("FAILED")
+      setMessage(error.response.data.message)
+      setVisible(true)
+      setLoading(false)
+      return error.response.data.message
     }    
   }
 
@@ -62,8 +84,11 @@ export default function useAuth() {//Hook autenticação da aplicação
       })
       setLoading(true)
     }catch(error){
-      console.log(error.message);
-      return error.message
+      setStatus("FAILED")
+      setMessage(error.response.data.message)
+      setVisible(true)
+      setLoading(false)
+      return error.response.data.message
     }
 
   }
@@ -79,10 +104,28 @@ export default function useAuth() {//Hook autenticação da aplicação
         }
       })
     } catch (error) {
-      console.log(error.message);
-      return error.message
+      setStatus("FAILED")
+      setMessage(error.response.data.message)
+      setVisible(true)
+      setLoading(false)
+      return error.response.data.message
     }
   }
 
-  return {status,setStatus,message,setMessage,visible,setVisible,loading,setLoading,login,register,requestReset,forgotPassword}
+  async function authUser(data){ //função para autenticar o usuário no sistema
+    
+    setAuthenticated(true) 
+
+    localStorage.setItem('token', JSON.stringify(data.token))
+  }
+
+  async function logout(){
+
+    setAuthenticated(false);
+    localStorage.removeItem('token');
+    api.defaults.headers.Authorization = undefined;
+    history('/login');
+  }
+
+  return {status,setStatus,message,setMessage,visible,setVisible,loading,setLoading,login,register,requestReset,forgotPassword,authenticated,logout,setAuthenticated}
 }

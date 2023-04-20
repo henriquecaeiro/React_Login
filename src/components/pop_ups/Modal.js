@@ -1,5 +1,5 @@
 //Importação de  pacotes e componentes
-import React, {useState,useContext} from "react";
+import React, {useContext,useEffect} from "react";
 import './Modal.css'
 import error from '../../assets/Cancel.png';
 import success from '../../assets/Ok.png';
@@ -8,10 +8,19 @@ import { Context } from '../../context/userContext';
 
 export default function Modal() {//modal de avisos do app
 
-    const { status,message,setVisible,setLoading } = useContext(Context) 
+    const { status,message,setVisible,setLoading,visible } = useContext(Context) 
     //funções e variáveis vindas do contexto
 
-    setLoading(false)//Desativar o carregamento ao aparecer o modal
+
+
+    useEffect(()=>{
+
+        if(visible){
+            setLoading(false);//Desativar o carregamento ao aparecer o modal
+
+        }
+
+    },[])
 
     return(
         <div className="modal-bg">
@@ -33,7 +42,7 @@ export default function Modal() {//modal de avisos do app
                         <button className="button-suc" onClick={()=> setVisible(false)}>Entrar</button>
                     </>
                 }
-                {status == 'PEDING' &&
+                {status == "PENDING" &&
                     <>
                         <img src={wait} alt="logo" className="icon"/>
                         <h1 className="title">Pendente!</h1>
