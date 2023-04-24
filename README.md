@@ -10,6 +10,10 @@ Esse projeto foi criado para implementar uma API de login e autenticação de us
 Onde o usuário pode logar no sistema, ou se cadastrar para entrar no mesmo.
 Demonstrando assim todas as funcionalidades, criadas na api.
 
+Link da API:
+
+https://github.com/henriquecaeiro/Login_API
+
 ## Observação
 
 Por conta da aplicação ser hospedada em um servidor gratuito, a mesma demora um pouco para ser inicializada. Se houver alguma lentidão ao testar o projeto espere um pouco ou reinicie a página.
