@@ -10,6 +10,19 @@ Esse projeto foi criado para implementar uma API de login e autenticação de us
 Onde o usuário pode logar no sistema, ou se cadastrar para entrar no mesmo.
 Demonstrando assim todas as funcionalidades, criadas na api.
 
+## Observação
+
+Por conta da aplicação ser hospedada em um servidor gratuito, a mesma demora um pouco para ser inicializada. Se houver alguma lentidão ao testar o projeto espere um pouco ou reinicie a página.
+
+## Layout 
+
+![Layout 1](https://github.com/henriquecaeiro/React_Login/blob/master/src/assets/login.png)
+
+![Layout 2](https://github.com/henriquecaeiro/React_Login/blob/master/src/assets/home.png)
+
+![Layout 3](https://github.com/henriquecaeiro/React_Login/blob/master/src/assets/info-page.png)
+
+
 ## Features do projeto:
 
 - [x]  Registro;
@@ -35,67 +48,4 @@ Demonstrando assim todas as funcionalidades, criadas na api.
 - Front end web: Netlify
 - Banco de dados MongoDb Cloud
 
-
-## Documentação da API
-
-#### Função de registro
-
-```http
-  POST /user/signup
-```
-
-| Parâmetro   | Tipo       | Descrição                           |
-| :---------- | :--------- | :---------------------------------- |
-| `campos` | `string` | **Obrigatório**. Preencher todos os campos do registro |
-
-#### Função de login
-
-```http
-  POST /user/signin
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
-
-#### Verificação de email
-
-```http
-  GET /verify/:userId/:uniqueString
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
-
-#### Email verificado
-
-```http
-  GET /verified
-```
-
-| Retorno   | Tipo    |      
- | :--------- | :------------------------------------------ |
-| `Resposta`      | `file` |
-
-
-#### Pedido de reset de senha
-
-```http
-  POST /requestPasswordReset
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
-
-#### Pedido de reset de senha
-
-```http
-  POST /resetPassword
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
 
