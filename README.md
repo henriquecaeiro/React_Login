@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# React API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/henriquecaeiro/React_Login/blob/master/LICENSE)
 
-## Available Scripts
+## Sobre o projeto.
 
-In the project directory, you can run:
+https://effulgent-naiad-81a0da.netlify.app/
 
-### `npm start`
+Esse projeto foi criado para implementar uma API de login e autenticação de usuário, de minha autoria.
+Onde o usuário pode logar no sistema, ou se cadastrar para entrar no mesmo.
+Demonstrando assim todas as funcionalidades, criadas na api.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features do projeto:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [x]  Registro;
+- [x]  Login;
+- [x]  Verificação de usuário pelo email;
+- [x]  Reset de senha e;
+- [x]  Autenticação de usuário.
 
-### `npm test`
+# Tecnologias utilizadas 
+## Back end
+- Nodejs
+- ExpressJs
+- MongoDB
+- Mongoose
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Front end
 
-### `npm run build`
+- HTML/CSS/JS
+- ReactJs
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implatação em produção 
+- Back end: Render
+- Front end web: Netlify
+- Banco de dados MongoDb Cloud
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Documentação da API
 
-### `npm run eject`
+#### Função de registro
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```http
+  POST /user/signup
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `campos` | `string` | **Obrigatório**. Preencher todos os campos do registro |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Função de login
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```http
+  POST /user/signin
+```
 
-## Learn More
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Verificação de email
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```http
+  GET /verify/:userId/:uniqueString
+```
 
-### Code Splitting
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Email verificado
 
-### Analyzing the Bundle Size
+```http
+  GET /verified
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Retorno   | Tipo    |      
+ | :--------- | :------------------------------------------ |
+| `Resposta`      | `file` |
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Pedido de reset de senha
 
-### Advanced Configuration
+```http
+  POST /requestPasswordReset
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
 
-### Deployment
+#### Pedido de reset de senha
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```http
+  POST /resetPassword
+```
 
-### `npm run build` fails to minify
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `campos`      | `string` | **Obrigatório**. Preencher todos os campos |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
